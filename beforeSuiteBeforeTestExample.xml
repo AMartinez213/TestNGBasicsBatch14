@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="annotation">
+        <classes>
+            <class name="annotations.testAnnotations"></class>
+            <class name="annotations.test1"></class>
+            <class name="annotations.test2"></class>
+        </classes>
+    </test>
+
+    <test name="test2">
+        <packages>
+            <package name="annotations">
+            </package>
+        </packages>
+    </test>
+</suite>

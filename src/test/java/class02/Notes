@@ -1,0 +1,61 @@
+TestNG Class02:
+1) @Test --> We write all the test cases under this annotation
+2) @BeforeMethod --> Pre-Condition (runs before every @Test)
+3) @AfterMethod --> Post-Condition
+4) Enable = False (will not run)
+5) Priority -->by default (0)
+6) DependsOnMethods (Will only execute the method if the method on which it is depending will pass)
+
+**Assertion**
+Tells us if test case passed or failed
+
+Hard Assertion:
+Assert.AssertEquals(string 1, string 2)
+Assert.AssertTrue(boolean) --> will pass when boolean is TRUE
+Assert.AssertFalse(boolean --> will pass when boolean is FALSE
+
+Notes:
+If in a single test case hard assertion fails --> it will terminate the execution of that particular test case and will
+not be testing other assertion or even executing the rest of code inside the same TEST CASE
+
+Soft Assertion:
+1) Create an instance SoftAssert soft=new SoftAssert()
+2) Call the assert equals or assert TRUE or assert FALSE from the SoftAssert
+3) Soft.assertAll() --> Assert every assertion
+
+Notes:
+If in a single test case your assertion fails, even then the rest of your assertions will be executed
+
+**TestNG XML**
+Give us control to execute our classes/test cases in specified manner
+
+How to create testNG XML
+goto plug-ins
+install the plug-in create TestNG XML
+
+Right Click on any class
+click on create TestNG.XML
+Reload from disk
+
+Go to code
+reformat code
+
+**Execution**
+1) Class Base execution --> we can give the name of class under <classes?
+2) MethodWise execution --> we can include or exclude the methods we want to run from a specific class
+3) PackageWise execution --> <packages>
+4) Dual @Test --> in a single <suite> we can have several <test> in each awe can define the packages or classes
+                  that we want to run --> more organized
+5) GroupWise execution
+   <suite name="mysuite1">
+     <test name ="1stTest">
+         <groups>
+           <run>
+           <include="regression">
+           </run>
+         </groups>
+       <packages>
+         <package name= "class01"/>
+       </packages>
+     </test>
+   </suite>

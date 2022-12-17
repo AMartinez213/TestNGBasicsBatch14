@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="class03.listener">
+
+        </listener>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/AMart/IntelliJ/Class Files/TestNGBasicsBatch14/src/test/java/class03">
+        <classes>
+            <class name="class02.HardAssertions">
+            </class>
+            <class name="class02.softAssertions">
+            </class>
+
+        </classes>
+
+
+
+    </test>
+</suite>

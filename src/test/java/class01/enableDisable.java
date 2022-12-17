@@ -1,0 +1,14 @@
+package class01;
+
+import org.testng.annotations.Test;
+
+public class enableDisable {
+    @Test(enabled = false)
+    public void aTest(){
+        System.out.println("I am A test");
+    }
+    @Test
+    public void bTest(){
+        System.out.println("I am B test");
+    }
+}
